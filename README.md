@@ -1,7 +1,9 @@
 # Hospital-Mangement-System-Updated-Version
  A web-based application in which the patient can book the Appointment and cancel their appointment. The admin can manage all the details about booking and prescription           details, also he can add and remove doctors. The doctors can accept and reject the patient appointments and the doctor can also prescribe some medicine to the patient
   Hospital Management System using MySQL, Php.
-
+  
+  visit : [Live Demo](https://ganapathydawecare.000webhostapp.com/)
+  
 ## Prerequisites
 1. Install XAMPP web server
 2. Any Editor (Preferably VS Code or Brackets Text Editor)
