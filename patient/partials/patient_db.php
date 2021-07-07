@@ -239,11 +239,10 @@ if(isset($_GET['select_doc']))
         
     } else {
         echo "
-        <select class='form-control'>
-        
+        <label for='message-text' class='col-form-label'>Select Doctor:</label>
+        <select class='form-control'name='doc_emailid'>
         <option style='width:280px;'>--No Doctors--</option>
-        
-        </select>";
+       </select>";
     }
 
 }
