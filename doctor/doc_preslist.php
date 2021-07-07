@@ -18,8 +18,7 @@ if(isset($_POST['search']))
 // function to connect and execute the query
 function filterTable($query)
 {
-    $connect = mysqli_connect("localhost", "root", "", "hms");
-    
+    include("../includes/db_connect.php");
     $filter_Result = mysqli_query($connect, $query);
     return $filter_Result;
 }
