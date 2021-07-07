@@ -7,12 +7,7 @@
 
 	<!-- Nav Bar -->
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#009879;">
-		<a class="navbar-brand font-weight-bold" href="">WELCOME TO WE CARE <span style="color:#ff568c;font-weight:bold;font-family:sans-serif; font-size:30px;">
-	   <?php 
-	   
-		   echo $loggeduser_name;
-		
-	    ?> </span></a>
+		<a class="navbar-brand font-weight-bold" href="">WELCOME TO WE CARE</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
@@ -52,7 +47,12 @@
 
 	<div class="welcome-pat">
 		<center>
-			<h1 class="login_home-header1 font-weight-bold">WELCOME PATIENT</h1>
+			<p class="login_home-header1 h3 font-weight-bold">WELCOME <span class=" h1 text-warning font-weight-bold">
+	   <?php 
+	   
+		   echo $loggeduser_name;
+		
+	    ?> </span></p>
 			<h1 class="login_home-header2 font-weight-bold">WE CARE HOSPITAL WELCOME YOU</h1>
 		</center>
     </div>
