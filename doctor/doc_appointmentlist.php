@@ -109,7 +109,7 @@ function filterTable($query)
 				?>
 			</form>
 	
-	    <form method="POST" action='doc_prescriptionsend.php'>
+	    <form method="GET" action=''>
 		    <input type='hidden' name='name' value='<?php echo $row['fullname'] ?>'/>
 		    <input type='hidden' name='user_mail' value='<?php echo $row['user_emailid'] ?>'/>
 		    <input type='hidden' name='doc_mail' value='<?php echo $row['doc_emailid'] ?>'/>
@@ -133,4 +133,92 @@ function filterTable($query)
    <?php endwhile;?>
     </table>
     </div>
+
+
+
+    
+<?php
+if (isset($_GET['presc'])) {
+    include('../includes/db_connect.php');
+    $user_mail = $_GET['user_mail'] ;
+    $doc_mail = $_GET['doc_mail'] ;
+    $mobile = $_GET['no'] ;
+    $appointmentdate = $_GET['appointmentdate'] ;
+    $appointmenttime = $_GET['appointmenttime'] ;
+    $fullname = $_GET['name'] ;
+    $dis =  $_GET['di'];
+    $gen =  $_GET['gen'];
+    $fees=$_GET['cfees'];
+    echo '
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#sendprescription").modal(); 
+                });
+            </script>
+        ';
+    // <!-- edit product modal -->
+    echo '
+<!-- Send Prescription modal -->
+<div class="modal fade" id="sendprescription" tabindex="-1" role="dialog" aria-labelledby="EditdepartmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Send Prescription</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="POST" action="partials/doctor_db.php" enctype="multipart/form-data">
+              <input type="hidden" name="fname" value="'.$fullname.'"/>
+              <input type="hidden" name="mobileno" value="'.$mobile.'"/>
+              <input type="hidden" name="adate" value="'.$appointmentdate.'"/>
+              <input type="hidden" name="atime" value="'.$appointmenttime.'"/>
+              <input type="hidden" name="cfees" value="'.$fees.'"/>
+                <div class="modal-body">
+                       
+                <div class="form-group">
+                        <label for="message-text" class="col-form-label">Doctor Mailid:</label>
+                        <input type="text" class="form-control" name="doc_mail" id="doc_mail" value="'.$doc_mail.'" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Patient Mailid :</label>
+                        <input type="text" class="form-control" name="user_mail" id="user_mail" value="'.$user_mail.'" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Disease Name and No.of.Days in sick :</label>
+                        <input type="text" class="form-control" name="dis" id="dis" value="'.$dis.'" readonly>
+                    </div>
+                   <div class="form-group">
+                        <label for="message-text" class="col-form-label">Patient Gender :</label>
+                        <input type="text" class="form-control" name="gen" id="gen" value="'.$gen.'" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Medicine :</label>
+                        <input type="text" class="form-control" placeholder="Enter Medicine name"name="medicine" id="medicine" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Patient Need To Meet Your or Not :</label>
+                        <input type="text" class="form-control" placeholder="Enter Yes (or) No"name="meet" id="meet" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Medicine :</label>
+                        <input type="text" class="form-control" name="fees" id="fees" value="'.$fees.'" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="floatingTextarea">Enter the cure Here:</label>
+                        <textarea class="form-control" name="message" id="message" placeholder="Enter Your Message Here"></textarea>  
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success"  style="background-color:#009879" name="doc_prescriptionsend">Send Prescription</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>';
+}
+?>
+
 <?php include('partials/doc_footer.php');?>
