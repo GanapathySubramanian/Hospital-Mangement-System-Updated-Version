@@ -6,12 +6,12 @@ if(isset($_POST['search']))
     $valueToSearch = $_POST['valueToSearch'];
     // search in all table columns
     // using concat mysql function
-    $query = "SELECT * FROM `pattable` INNER JOIN `appointment` ON pattable.email=appointment.user_emailid WHERE appointment.appointmentdate >= CURDATE() and CONCAT(pattable.email,pattable.phoneno,pattable.gender,appointment.doc_emailid,appointment.userstatus,appointment.doctorstatus,appointment.specialization,appointment.consultancyfees,appointment.appointmenttime,appointment.appointmentdate) LIKE '%".$valueToSearch."%'";
+    $query = "SELECT * FROM `pattable` INNER JOIN `appointment` ON pattable.email=appointment.user_emailid WHERE appointment.appointmentdate >= CURDATE() and CONCAT(pattable.email,pattable.phoneno,pattable.gender,appointment.doc_emailid,appointment.userstatus,appointment.doctorstatus,appointment.specialization,appointment.consultancyfees,appointment.appointmenttime,appointment.appointmentdate) LIKE '%".$valueToSearch."%' order by appointment.appointmentdate asc";
     $search_result = filterTable($query);
     
 }
  else {
-    $query = "SELECT * FROM `pattable` INNER JOIN `appointment` ON pattable.email=appointment.user_emailid where appointment.appointmentdate >= CURDATE()";
+    $query = "SELECT * FROM `pattable` INNER JOIN `appointment` ON pattable.email=appointment.user_emailid where appointment.appointmentdate >= CURDATE() order by appointment.appointmentdate asc";
     $search_result = filterTable($query);
 }
 
