@@ -7,12 +7,7 @@
 
 	<!-- Nav Bar -->
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#009879;">
-		<a class="navbar-brand font-weight-bold" href="">WELCOME TO WE CARE <span style=" font-family:sans-serif;color:#ff568c;font-size:30px;">
-	   <?php 
-	   
-		   echo $loggeddoc_name;
-		
-	    ?> </span></a>
+		<a class="navbar-brand font-weight-bold" href="">WELCOME TO WE CARE</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
@@ -48,7 +43,12 @@
 	  </nav>
 
 	<center>
-		<h1 class="login_home-header1">WELCOME DOCTOR</h1>
+		<p class="login_home-header1 h3">WELCOME DOCTOR <p class="h1 font-weight-bold text-warning">
+	   <?php 
+	   
+		   echo $loggeddoc_name;
+		
+	    ?> </p></p>
 		<h1 class="login_home-header2">WE CARE HOSPITAL WELCOME YOU</h1>
 	</center>	
 <?php include("partials/doc_footer.php");?>
