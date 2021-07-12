@@ -160,7 +160,6 @@ if (isset($_GET['id'])) {
                 });
             </script>
         ';
-    // <!-- edit product modal -->
     echo '
 <!-- Edit department modal -->
 <div class="modal fade" id="Editdepartment" tabindex="-1" role="dialog" aria-labelledby="EditdepartmentModalLabel" aria-hidden="true">
