@@ -2,7 +2,7 @@
 <body class="login_home">
 	   <!-- Back Navigation -->
 	<nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="../pat_doc_signin.html"><i class="fas fa-backward"></i> Logout</a>
+        <a class="navbar-brand" href="../includes/logout.php?user=patient"><i class="fas fa-backward"></i> Logout</a>
     </nav>
 
 	<!-- Nav Bar -->
