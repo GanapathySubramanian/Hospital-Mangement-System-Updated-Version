@@ -2,7 +2,11 @@
 include('../includes/db_connect.php');
 
 session_start(); 
-
+ if(!isset($_SESSION['email']))
+    {
+        header('location:../pat_doc_signin.html');
+    }
+    else{
 $loggeduser_email=$_SESSION['email'];
 
 $query= "SELECT * FROM pattable where email='$loggeduser_email'";
@@ -13,8 +17,10 @@ while($row=mysqli_fetch_array($query_run)){
     $loggeduser_password=$row['password'];
     $loggeduser_gender=$row['gender'];
 }
+}
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
