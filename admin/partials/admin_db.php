@@ -5,12 +5,13 @@ include('../../includes/db_connect.php');
 
 if(isset($_POST['admin_login']))
 {
-	
+	session_start();
 	$userid = $_POST['admin_emailid'];
 	$password = $_POST['admin_password'];
 
 		if($userid=='admin@gmail.com' && $password=='admin@123')
 		{
+		    $_SESSION['username']=$userid;
 		   header('location:../admin_home.php');
 		}
 	    else
@@ -18,8 +19,6 @@ if(isset($_POST['admin_login']))
 			header('location:../../loginfail.html');
 		}
 }
-
-
 
 //===============================================================ADMIN APPOINTMENT DELETE=====================================================
 
