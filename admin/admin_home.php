@@ -3,7 +3,7 @@
     
 	   <!-- Back Navigation -->
 	<nav class="navbar navbar-light bg-light sticky-top">
-        <a class="navbar-brand font-weight-bold" href="../admin_signin.html"><i class="fas fa-backward"></i> Logout</a>
+        <a class="navbar-brand font-weight-bold" href="../includes/logout.php?user=admin"><i class="fas fa-backward"></i> Logout</a>
     </nav>
 
 	<!-- Nav Bar -->
