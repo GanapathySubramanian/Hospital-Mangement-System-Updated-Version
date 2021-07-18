@@ -1,3 +1,11 @@
+<?php
+    include('../includes/db_connect.php');
+    session_start();
+    if(!isset($_SESSION['username']))
+    {
+        header('location:../admin_signin.html');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
