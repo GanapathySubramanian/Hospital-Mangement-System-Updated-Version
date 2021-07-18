@@ -2,7 +2,11 @@
 include('../includes/db_connect.php');
 
 session_start(); 
-
+ if(!isset($_SESSION['mail']))
+    {
+        header('location:../pat_doc_signin.html');
+    }
+    else{
 $loggeddoc_email=$_SESSION['mail'];
 
 $query= "SELECT * FROM doctable where doc_emailid='$loggeddoc_email'";
@@ -18,6 +22,7 @@ while($row2=mysqli_fetch_array($query_run)){
     $loggeddoc_spec=$row2['specilaization'];
     $loggeddoc_gender=$row2['docgender'];
     $loggeddoc_confees=$row2['consultancyfees'];
+}
 }
 
 ?>
