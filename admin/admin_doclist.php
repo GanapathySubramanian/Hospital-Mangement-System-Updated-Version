@@ -159,7 +159,7 @@ function filterTable($query)
         <td><?php echo $row['docgender']?></td>
         <td><?php echo $row['docnum'] ?></td>
         <td><?php echo $row['specilaization'] ?></td>
-        <td><?php echo $row['consultancyfees'] ?></td>
+       <td><?php echo 'Rs '.$row['consultancyfees'].'/-' ?></td>
         <form action="partials/admin_db.php" method="POST" role="form">
         <td>
             <input type='hidden' name='doc_emailid' value='<?php echo $row['doc_emailid']?>'/>
