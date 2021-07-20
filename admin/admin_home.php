@@ -38,7 +38,7 @@
 
 
 	<center>
-		<h1 class="login_home-header1">WELCOME ADMIN</h1>
+		<p class="login_home-header1 h3">WELCOME <span class="h1 font-weight-bold text-warning">ADMIN</span></p>
 		<h1 class="login_home-header2">WE CARE HOSPITAL WELCOME YOU</h1>
 	</center>
 <?php include('partials/admin_footer.php');?>
