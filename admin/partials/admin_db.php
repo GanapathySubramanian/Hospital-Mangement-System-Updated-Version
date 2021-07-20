@@ -301,19 +301,30 @@ if (isset($_POST['admin_editdepartment']))
 			echo "<script>alert('please select Department image ') </script>";
 		}
 		else{
-			$reg="update department set depart_name='$depart_name',depart_para1='$depart_para1',depart_para2='$depart_para2',depart_amt='$amt',depart_mrgtime='$depart_mrg',depart_evetime='$depart_eve' where id='$depart_id'";
-			$data=mysqli_query($connect,$reg);
-			if($data)
+			$reg1="update department set depart_name='$depart_name',depart_para1='$depart_para1',depart_para2='$depart_para2',depart_amt='$amt',depart_mrgtime='$depart_mrg',depart_evetime='$depart_eve' where id='$depart_id'";
+			$data1=mysqli_query($connect,$reg1);
+			
+			if($data1)
 			{
-				echo"<script>window.alert('Department Updated Successfully')</script>";
-				?>
-				<META HTTP-EQUIV="Refresh" CONTENT="0; URL=../admin_departlist.php">
-				<?php
+				$reg2="update doctable set consultancyfees='$amt' Where specilaization='$depart_name'";
+				$data2=mysqli_query($connect,$reg2);
+				if($data2){
+					echo"<script>window.alert('Department Updated Successfully')</script>";
+					?>
+					<META HTTP-EQUIV="Refresh" CONTENT="0; URL=../admin_departlist.php">
+					<?php
+				}
+				else{
+					echo"<script>window.alert('Failed to Update Department in doctor')</script>";
+					?>
+					<META HTTP-EQUIV="Refresh" CONTENT="0; URL=../admin_departlist.php">
+					<?php
+					}
 
 			}
 			else
 			{
-				echo"<script>window.alert('Failed to Update Your Department')</script>";
+				echo"<script>window.alert('Failed to Update Department')</script>";
 				?>
 				<META HTTP-EQUIV="Refresh" CONTENT="0; URL=../admin_departlist.php">
 				<?php
