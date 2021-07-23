@@ -123,7 +123,7 @@ include('includes/db_connect.php');
               <img class="dir-img" src="assets/images&gif/others/appoint.jpg" alt="">
               <p class="dir-side-heading">Appointments</p>
               <p class="dir-para">We recommend scheduling an appointment in advance.</p>
-              <p class="dir-anchor" style="text-align: center;"><a href="signin.html"><i class="fas fa-long-arrow-alt-right dir-icon"></i> Appointment</a></p>
+              <p class="dir-anchor" style="text-align: center;"><a href="pat_doc_signin.html"><i class="fas fa-long-arrow-alt-right dir-icon"></i> Appointment</a></p>
           </div>
         </div>
         <a class="carousel-control-prev" href="#direction-carousel" role="button" data-slide="prev">
