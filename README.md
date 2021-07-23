@@ -3,6 +3,14 @@
   Hospital Management System using MySQL, Php.
   
   **Visit** : [Live Demo](https://ganapathydawecare.000webhostapp.com/)
+
+<h1>login credentials</h1>
+ <h3>Admin :</h3>
+   <p>Email : admin@gmail.com<br>Password : admin@123</p>
+ <h3>Patient :</h3>
+   <p>Email : ganapathy5@gmail.com<br>Password : 123</p>
+ <h3>Doctor :</h3>
+   <p>Email : venky@gmail.com<br>Password : 123</p>
   
 ## Prerequisites
 1. Install XAMPP web server
