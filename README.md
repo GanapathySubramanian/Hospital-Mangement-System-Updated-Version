@@ -1,7 +1,7 @@
 # WECARE - Hospital-Mangement-System-Updated-Version
  A web-based application in which the patient can book the Appointment and cancel their appointment. The admin can manage all the details about booking and prescription           details, also he can add and remove doctors. The doctors can accept and reject the patient appointments and the doctor can also prescribe some medicine to the patient
   
-  **Visit** : [Live Demo](https://ganapathydawecare.000webhostapp.com/)
+  **Visit** : [Live Demo](http://wecare.great-site.net/)
 
 <h1>login credentials</h1>
  <h3>Admin :</h3>
